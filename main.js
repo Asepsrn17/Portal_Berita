@@ -19,6 +19,11 @@ searchBtn.addEventListener("click",function(){
     fetchQueryNews();
 });
 
+newsQuery.addEventListener("input", e => {
+    newsType.innerHTML="";
+    fetchQueryNews();
+});
+
 
 const fetchHeadlines = async () => {
     const response = await fetch(HEADLINES_NEWS+API_KEY);
